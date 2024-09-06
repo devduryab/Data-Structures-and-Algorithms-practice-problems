@@ -6,7 +6,6 @@
 # pair found at (8, 2)
 # paior found at (7, 3)
 
-
 def findAllPairs(nums, target):
     pairs = []  # List to store all pairs
 
