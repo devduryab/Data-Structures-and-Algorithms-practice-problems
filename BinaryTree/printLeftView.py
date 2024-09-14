@@ -1,7 +1,6 @@
 from collections import deque
 
 
-# A class to store a binary tree node
 class Node:
     def __init__(self, key=None, left=None, right=None):
         self.key = key
@@ -9,32 +8,20 @@ class Node:
         self.right = right
 
 
-# Iterative function to print the left view of a given binary tree
 def leftView(root):
 
-    # return if the tree is empty
     if root is None:
         return
-
-    # create an empty queue and enqueue the root node
     queue = deque()
     queue.append(root)
 
-    # loop till queue is empty
     while queue:
-
-        # calculate the total number of nodes at the current level
         size = len(queue)
         i = 0
-
-        # process every node of the current level and enqueue their
-        # non-empty left and right child
         while i < size:
-            # pointer to store the current node
             curr = queue.popleft()
             i = i + 1
 
-            # if this is the first node of the current level, print it
             if i == 1:
                 print(curr.key, end=' ')
 
